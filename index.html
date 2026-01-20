@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RINO CLIENT | The Apex Predator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;600;700&family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="noise-overlay"></div>
+    <div class="scanlines"></div>
+    
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+
+    <div id="sales-notification" class="sales-notification hidden">
+        <div class="sales-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+        <div class="sales-content">
+            <span class="sales-user">AlexFromNY</span> purchased
+            <span class="sales-plan">Lifetime Key</span>
+            <small>Just now</small>
+        </div>
+    </div>
+
+    <div class="boot-screen">
+        <div class="boot-terminal">
+            <div class="boot-log" id="boot-log"></div>
+            <div class="boot-progress">
+                <div class="boot-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container nav-wrap">
+            <a href="#" class="brand">
+                <i class="fa-solid fa-dragon"></i> RINO <span class="text-red">CLIENT</span>
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link active"><span>01.</span> Home</a></li>
+                <li><a href="#features" class="nav-link"><span>02.</span> Features</a></li>
+                <li><a href="#interface" class="nav-link"><span>03.</span> Interface</a></li>
+                <li><a href="#pricing" class="nav-link"><span>04.</span> Pricing</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="server-status">
+                    <span class="ping-dot"></span>
+                    <div class="status-text">
+                        <small>STATUS</small>
+                        <span>UNDETECTED</span>
+                    </div>
+                </div>
+                <a href="#pricing" class="cta-btn">GET ACCESS</a>
+            </div>
+
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-section">
+        <canvas id="matrix-canvas"></canvas>
+        <div class="hero-vignette"></div>
+        
+        <div class="container hero-container">
+            <div class="hero-text-wrapper">
+                <div class="glitch-wrapper">
+                    <h1 class="hero-title glitch" data-text="UNFAIR ADVANTAGE">UNFAIR ADVANTAGE</h1>
+                </div>
+                <p class="hero-subtitle">
+                    The world's most sophisticated external cheat. 
+                    Kernel-level security meets pixel-perfect aim assistance.
+                    <span class="highlight">Dominate the server.</span>
+                </p>
+                
+                <div class="hero-btns">
+                    <a href="#pricing" class="btn-primary">
+                        <span class="btn-content">INITIATE PURCHASE <i class="fa-solid fa-angle-right"></i></span>
+                        <span class="btn-glitch"></span>
+                    </a>
+                    <a href="https://discord.gg/UtYn9wwdDv" target="_blank" class="btn-discord">
+                        <i class="fa-brands fa-discord"></i> Join Community
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <h3 class="counter" data-target="15240">0</h3>
+                        <p>Verified Downloads</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="stat-box">
+                        <h3 class="counter" data-target="99">0</h3>
+                        <p>% Uptime</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="stat-box">
+                        <h3 class="live-online-count" id="live-users">420</h3>
+                        <p><span class="pulsing-dot"></span> Online Now</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>SCROLL TO EXPLORE</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="tagline">// CAPABILITIES</span>
+                <h2>ENGINEERED FOR <span class="text-red">PERFECTION</span></h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="f-card scroll-reveal">
+                    <div class="f-glow"></div>
+                    <div class="f-icon"><i class="fa-solid fa-shield-cat"></i></div>
+                    <h3>Kernel Bypass</h3>
+                    <p>Our Ring-0 hypervisor driver renders the cheat completely invisible to anti-cheat scans and task managers.</p>
+                </div>
+                <div class="f-card scroll-reveal">
+                    <div class="f-glow"></div>
+                    <div class="f-icon"><i class="fa-solid fa-crosshairs"></i></div>
+                    <h3>Humanized Aim</h3>
+                    <p>Adjustable smoothing, FOV, and bone randomization. Look like a pro, not a machine.</p>
+                </div>
+                <div class="f-card scroll-reveal">
+                    <div class="f-glow"></div>
+                    <div class="f-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h3>ESP & Visuals</h3>
+                    <p>Highly customizable glow, boxes, skeletons, and health bars. Stream-proof overlay included.</p>
+                </div>
+                <div class="f-card scroll-reveal">
+                    <div class="f-glow"></div>
+                    <div class="f-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                    <h3>Cloud Configs</h3>
+                    <p>Save your legit and rage settings to the cloud. Share config codes with friends instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interface" class="interface-section">
+        <div class="container">
+            <div class="interface-layout">
+                <div class="interface-info scroll-reveal">
+                    <span class="tagline">// NEXT-GEN GUI</span>
+                    <h2>CONTROL IS <span class="text-red">EVERYTHING</span></h2>
+                    <p>Forget editing .ini files. Our modern overlay allows you to adjust every setting in real-time without leaving the game.</p>
+                    
+                    <div class="feature-list">
+                        <div class="li-item"><i class="fa-solid fa-check"></i> <span>Mouse Driven Menu</span></div>
+                        <div class="li-item"><i class="fa-solid fa-check"></i> <span>Fully Color Customizable</span></div>
+                        <div class="li-item"><i class="fa-solid fa-check"></i> <span>Instant Toggle</span></div>
+                    </div>
+                </div>
+
+                <div class="interface-demo scroll-reveal">
+                    <div class="cheat-window">
+                        <div class="cw-header">
+                            <div class="cw-logo">RINO CLIENT <span>v2.4</span></div>
+                            <div class="cw-tabs">
+                                <button class="cw-tab active" data-tab="aim">AIMBOT</button>
+                                <button class="cw-tab" data-tab="visuals">VISUALS</button>
+                                <button class="cw-tab" data-tab="misc">MISC</button>
+                            </div>
+                        </div>
+                        <div class="cw-body">
+                            <div class="cw-content active" id="tab-aim">
+                                <div class="cw-row">
+                                    <label>Enable Aimbot</label>
+                                    <div class="cw-toggle checked"></div>
+                                </div>
+                                <div class="cw-row">
+                                    <label>Silent Aim</label>
+                                    <div class="cw-toggle"></div>
+                                </div>
+                                <div class="cw-slider-group">
+                                    <div class="label-flex"><label>FOV Radius</label> <span>120px</span></div>
+                                    <input type="range" class="cw-range" value="40">
+                                </div>
+                                <div class="cw-slider-group">
+                                    <div class="label-flex"><label>Smoothing</label> <span>4.5</span></div>
+                                    <input type="range" class="cw-range" value="60">
+                                </div>
+                            </div>
+
+                            <div class="cw-content" id="tab-visuals">
+                                <div class="cw-row">
+                                    <label>Box ESP</label>
+                                    <div class="cw-toggle checked"></div>
+                                </div>
+                                <div class="cw-row">
+                                    <label>Skeleton</label>
+                                    <div class="cw-toggle checked"></div>
+                                </div>
+                                <div class="cw-row">
+                                    <label>Snaplines</label>
+                                    <div class="cw-toggle"></div>
+                                </div>
+                                <div class="cw-slider-group">
+                                    <div class="label-flex"><label>Render Distance</label> <span>300m</span></div>
+                                    <input type="range" class="cw-range" value="80">
+                                </div>
+                            </div>
+
+                            <div class="cw-content" id="tab-misc">
+                                <div class="cw-row">
+                                    <label>Bunnyhop</label>
+                                    <div class="cw-toggle checked"></div>
+                                </div>
+                                <div class="cw-row">
+                                    <label>No Recoil</label>
+                                    <div class="cw-toggle checked"></div>
+                                </div>
+                                <div class="cw-row">
+                                    <label>Watermark</label>
+                                    <div class="cw-toggle checked"></div>
+                                </div>
+                                <button class="cw-btn">Save Config</button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing-section">
+        <div class="bg-glow"></div>
+        <div class="container">
+            <div class="section-header centered scroll-reveal">
+                <span class="tagline">// MARKETPLACE</span>
+                <h2>CHOOSE YOUR <span class="text-red">WEAPON</span></h2>
+                <p>Instant automated delivery via email immediately after purchase.</p>
+            </div>
+
+            <div class="billing-toggle scroll-reveal">
+                <span>MONTHLY</span>
+                <label class="switch">
+                    <input type="checkbox" id="billing-switch">
+                    <span class="slider"></span>
+                </label>
+                <span>LIFETIME</span>
+            </div>
+
+            <div class="pricing-cards">
+                <div class="p-card scroll-reveal delay-1">
+                    <div class="p-header">
+                        <h3>DAY PASS</h3>
+                        <div class="price-box">
+                            <span class="currency">€</span>
+                            <span class="amount" data-monthly="6" data-lifetime="6">6</span>
+                        </div>
+                        <p class="p-desc">Perfect for testing the waters.</p>
+                    </div>
+                    <ul class="p-features">
+                        <li><i class="fa-solid fa-check"></i> Full Features Access</li>
+                        <li><i class="fa-solid fa-check"></i> HWID Spoofer</li>
+                        <li><i class="fa-solid fa-check"></i> 24h Duration</li>
+                    </ul>
+                    <a href="#" class="p-btn">PURCHASE</a>
+                </div>
+
+                <div class="p-card featured scroll-reveal delay-2">
+                    <div class="best-value">MOST POPULAR</div>
+                    <div class="p-header">
+                        <h3>ELITE ACCESS</h3>
+                        <div class="price-box">
+                            <span class="currency">€</span>
+                            <span class="amount" data-monthly="25" data-lifetime="120">25</span>
+                            <span class="duration" data-monthly="/mo" data-lifetime="/once">/mo</span>
+                        </div>
+                        <p class="p-desc">For the dedicated player.</p>
+                    </div>
+                    <ul class="p-features">
+                        <li><i class="fa-solid fa-check"></i> <strong>Undetected Status</strong></li>
+                        <li><i class="fa-solid fa-check"></i> Private Discord Role</li>
+                        <li><i class="fa-solid fa-check"></i> Cloud Configs</li>
+                        <li><i class="fa-solid fa-check"></i> Stream Proofing</li>
+                    </ul>
+                    <a href="#" class="p-btn filled">PURCHASE NOW</a>
+                </div>
+
+                <div class="p-card scroll-reveal delay-3">
+                    <div class="p-header">
+                        <h3>LIFETIME</h3>
+                        <div class="price-box">
+                            <span class="currency">€</span>
+                            <span class="amount" data-monthly="150" data-lifetime="150">150</span>
+                        </div>
+                        <p class="p-desc">One payment, forever yours.</p>
+                    </div>
+                    <ul class="p-features">
+                        <li><i class="fa-solid fa-check"></i> <strong>Never pay again</strong></li>
+                        <li><i class="fa-solid fa-check"></i> Beta Branch Access</li>
+                        <li><i class="fa-solid fa-check"></i> Priority Support</li>
+                        <li><i class="fa-solid fa-check"></i> Profile Badge</li>
+                    </ul>
+                    <a href="#" class="p-btn">PURCHASE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2>RINO <span class="text-red">CLIENT</span></h2>
+                    <p>The last cheat you will ever need. Join thousands of users dominating the scene today.</p>
+                    <div class="payment-methods">
+                        <i class="fa-brands fa-bitcoin"></i>
+                        <i class="fa-brands fa-ethereum"></i>
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                    </div>
+                </div>
+                <div class="footer-cols">
+                    <div class="f-col">
+                        <h4>PRODUCT</h4>
+                        <a href="#">Status</a>
+                        <a href="#">Features</a>
+                        <a href="#">Changelog</a>
+                    </div>
+                    <div class="f-col">
+                        <h4>SUPPORT</h4>
+                        <a href="#">Discord</a>
+                        <a href="#">Contact</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                    <div class="f-col">
+                        <h4>LEGAL</h4>
+                        <a href="#">TOS</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Refunds</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Rino Client. Engineered in Germany.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
